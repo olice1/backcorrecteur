@@ -308,17 +308,96 @@ img {
 }
 
 /* ================================
-   Trust Section
+   Trust Badges
    ================================ */
 .trust-section {
-    padding: var(--spacing-xl) 0;
-    background: var(--gray-100);
+    background: linear-gradient(135deg, var(--primary-navy), #253a5f);
+    padding: var(--spacing-md) 0;
 }
 
-.trust-image {
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    max-width: 1200px;
     margin: 0 auto;
-    max-width: 600px;
-    animation: fadeIn 1s ease;
+    padding: 0 var(--spacing-sm);
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    text-align: center;
+    flex: 1 1 150px;
+    min-width: 100px;
+    max-width: 180px;
+}
+
+.trust-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--primary-orange);
+    transition: transform 0.3s ease;
+}
+
+.trust-badge:hover .trust-icon {
+    transform: scale(1.1);
+}
+
+.trust-text {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .trust-badges {
+        gap: var(--spacing-sm);
+    }
+
+    .trust-badge {
+        flex: 1 1 calc(50% - var(--spacing-sm));
+        min-width: 120px;
+    }
+
+    .trust-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .trust-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-section {
+        padding: var(--spacing-sm) 0;
+    }
+
+    .trust-badges {
+        gap: var(--spacing-xs);
+    }
+
+    .trust-badge {
+        flex: 1 1 calc(50% - var(--spacing-xs));
+        min-width: 90px;
+    }
+
+    .trust-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .trust-text {
+        font-size: 0.8rem;
+    }
 }
 
 @keyframes fadeIn {

@@ -17,7 +17,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -84,8 +84,61 @@
 
     <!-- Trust Section -->
     <section class="trust-section">
-        <div class="container">
-            <img src="assets/images/trust.png" alt="شارات الثقة" class="trust-image">
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+                        fill="currentColor" opacity="0.2" />
+                    <path d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span class="trust-text">دفع آمن</span>
+            </div>
+
+            <div class="trust-badge">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor" opacity="0.2" />
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="trust-text">توصيل سريع</span>
+            </div>
+
+            <div class="trust-badge">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.2" />
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span class="trust-text">دعم 24/7</span>
+            </div>
+
+            <div class="trust-badge">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="trust-text">ضمان الجودة</span>
+            </div>
+
+            <div class="trust-badge">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21 8V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H5C4.46957 18 3.96086 17.7893 3.58579 17.4142C3.21071 17.0391 3 16.5304 3 16V8M21 8L13.45 13.03C13.0333 13.3223 12.5232 13.4817 12 13.4817C11.4768 13.4817 10.9667 13.3223 10.55 13.03L3 8M21 8L13.5 2.5C13.0667 2.16667 12.5333 2 12 2C11.4667 2 10.9333 2.16667 10.5 2.5L3 8"
+                        fill="currentColor" opacity="0.2" />
+                    <path
+                        d="M21 8V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H5C4.46957 18 3.96086 17.7893 3.58579 17.4142C3.21071 17.0391 3 16.5304 3 16V8M21 8L13.45 13.03C13.0333 13.3223 12.5232 13.4817 12 13.4817C11.4768 13.4817 10.9667 13.3223 10.55 13.03L3 8M21 8L13.5 2.5C13.0667 2.16667 12.5333 2 12 2C11.4667 2 10.9333 2.16667 10.5 2.5L3 8"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7 13L12 9L17 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span class="trust-text">استرجاع الأموال</span>
+            </div>
         </div>
     </section>
 
@@ -274,7 +327,25 @@
 
                 <div class="form-group">
                     <label for="phone">رقم الهاتف *</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="أدخل رقم هاتفك">
+                    <input type="tel" id="phone" name="phone" required placeholder="مثال: +965 12345678">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني (اختياري)</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">الدولة *</label>
+                    <select id="country" name="country" required>
+                        <option value="">-- اختر الدولة --</option>
+                        <option value="الكويت" selected>الكويت</option>
+                        <option value="السعودية">السعودية</option>
+                        <option value="الإمارات">الإمارات</option>
+                        <option value="البحرين">البحرين</option>
+                        <option value="قطر">قطر</option>
+                        <option value="عمان">عمان</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -284,12 +355,12 @@
 
                 <div class="form-group">
                     <label for="address">العنوان الكامل *</label>
-                    <textarea id="address" name="address" required placeholder="أدخل عنوانك بالتفصيل"
+                    <textarea id="address" name="address" required placeholder="القطعة، الشارع، المنطقة، رقم المنزل..."
                         rows="3"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="size">اختر المقاس *</label>
+                    <label for="size">المقاس *</label>
                     <select id="size" name="size" required>
                         <option value="">-- اختر المقاس --</option>
                         <option value="L">L (155-170 سم، 47.5-64 كجم)</option>
@@ -319,7 +390,7 @@
                     <span class="btn-icon">✓</span>
                 </button>
 
-                <p class="form-note">* جميع الحقول المطلوبة إلزامية</p>
+                <p class="form-note">📦 الدفع عند الاستلام | 🚚 شحن سريع لجميع المناطق</p>
             </form>
         </div>
     </section>

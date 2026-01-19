@@ -19,18 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get form data
             const formData = {
+                orderRef: orderRef,
                 name: document.getElementById('name').value.trim(),
                 phone: document.getElementById('phone').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                country: document.getElementById('country').value,
                 city: document.getElementById('city').value.trim(),
                 address: document.getElementById('address').value.trim(),
                 size: document.getElementById('size').value,
                 quantity: document.getElementById('quantity').value,
-                notes: document.getElementById('notes').value.trim(),
-                orderRef: orderRef
+                notes: document.getElementById('notes').value.trim()
             };
             
             // Basic validation
-            if (!formData.name || !formData.phone || !formData.city || !formData.address || !formData.size) {
+            if (!formData.name || !formData.phone || !formData.country || !formData.city || !formData.address || !formData.size) {
                 showNotification('يرجى ملء جميع الحقول المطلوبة', 'error');
                 return;
             }
@@ -40,6 +42,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!phoneRegex.test(formData.phone)) {
                 showNotification('يرجى إدخال رقم هاتف صحيح', 'error');
                 return;
+            }
+            
+            // Email validation (if provided)
+            if (formData.email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                    showNotification('يرجى إدخال بريد إلكتروني صحيح', 'error');
+                    return;
+                }
             }
             
             // Disable submit button to prevent double submission

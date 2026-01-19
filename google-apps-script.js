@@ -26,17 +26,19 @@ function doPost(e) {
     // تحليل البيانات المرسلة
     var data = JSON.parse(e.postData.contents);
     
-    // إضافة صف جديد بالبيانات
+    // إضافة صف جديد بالبيانات - COD Format
     sheet.appendRow([
       new Date(),                    // التاريخ والوقت
-      data.name || '',               // الاسم
-      data.phone || '',              // الهاتف
+      data.orderRef || '',           // رقم الطلب
+      data.name || '',               // الاسم الكامل
+      data.phone || '',              // رقم الهاتف
+      data.email || '',              // البريد الإلكتروني
+      data.country || '',            // الدولة
       data.city || '',               // المدينة
-      data.address || '',            // العنوان
+      data.address || '',            // العنوان الكامل
       data.size || '',               // المقاس
       data.quantity || '',           // الكمية
-      data.notes || '',              // ملاحظات
-      data.orderRef || ''            // رقم الطلب
+      data.notes || ''               // ملاحظات
     ]);
     
     // إرجاع استجابة ناجحة
@@ -88,36 +90,40 @@ function testFunction() {
 function setupSheet() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   
-  // إضافة العناوين
+  // إضافة العناوين - COD Format
   sheet.appendRow([
     'التاريخ',
-    'الاسم',
-    'الهاتف',
+    'رقم الطلب',
+    'الاسم الكامل',
+    'رقم الهاتف',
+    'البريد الإلكتروني',
+    'الدولة',
     'المدينة',
-    'العنوان',
+    'العنوان الكامل',
     'المقاس',
     'الكمية',
-    'ملاحظات',
-    'رقم الطلب'
+    'ملاحظات'
   ]);
   
   // تنسيق صف العناوين
-  var headerRange = sheet.getRange(1, 1, 1, 9);
+  var headerRange = sheet.getRange(1, 1, 1, 11);
   headerRange.setFontWeight('bold');
   headerRange.setBackground('#1a2b4a');
   headerRange.setFontColor('#ffffff');
   headerRange.setHorizontalAlignment('center');
   
   // ضبط عرض الأعمدة
-  sheet.setColumnWidth(1, 150);  // التاريخ
-  sheet.setColumnWidth(2, 150);  // الاسم
-  sheet.setColumnWidth(3, 120);  // الهاتف
-  sheet.setColumnWidth(4, 120);  // المدينة
-  sheet.setColumnWidth(5, 250);  // العنوان
-  sheet.setColumnWidth(6, 80);   // المقاس
-  sheet.setColumnWidth(7, 80);   // الكمية
-  sheet.setColumnWidth(8, 200);  // ملاحظات
-  sheet.setColumnWidth(9, 120);  // رقم الطلب
+  sheet.setColumnWidth(1, 150);   // التاريخ
+  sheet.setColumnWidth(2, 120);   // رقم الطلب
+  sheet.setColumnWidth(3, 150);   // الاسم
+  sheet.setColumnWidth(4, 130);   // الهاتف
+  sheet.setColumnWidth(5, 180);   // الإيميل
+  sheet.setColumnWidth(6, 100);   // الدولة
+  sheet.setColumnWidth(7, 120);   // المدينة
+  sheet.setColumnWidth(8, 250);   // العنوان
+  sheet.setColumnWidth(9, 80);    // المقاس
+  sheet.setColumnWidth(10, 80);   // الكمية
+  sheet.setColumnWidth(11, 200);  // ملاحظات
   
   Logger.log('تم إعداد الورقة بنجاح');
 }
