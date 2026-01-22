@@ -7,7 +7,7 @@
 const CONFIG = {
     // Facebook Pixel ID
     // احصل عليه من: Facebook Events Manager > Pixels
-    FACEBOOK_PIXEL_ID: 'tajer Pixel ID',
+    FACEBOOK_PIXEL_ID: '1518638202769696',
     
     // Google Analytics 4 Measurement ID
     // احصل عليه من: GA4 > Admin > Data Streams
