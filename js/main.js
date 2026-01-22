@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 orderRef: orderRef,
                 name: document.getElementById('name').value.trim(),
                 phone: document.getElementById('phone').value.trim(),
+                phone2: document.getElementById('phone2').value.trim(),
                 email: document.getElementById('email').value.trim(),
                 country: document.getElementById('country').value,
                 city: document.getElementById('city').value.trim(),

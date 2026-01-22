@@ -31,7 +31,8 @@ function doPost(e) {
       new Date(),                    // التاريخ والوقت
       data.orderRef || '',           // رقم الطلب
       data.name || '',               // الاسم الكامل
-      data.phone || '',              // رقم الهاتف
+      data.phone || '',              // رقم الهاتف الأول
+      data.phone2 || '',             // رقم الهاتف الثاني
       data.email || '',              // البريد الإلكتروني
       data.country || '',            // الدولة
       data.city || '',               // المدينة
@@ -95,7 +96,8 @@ function setupSheet() {
     'التاريخ',
     'رقم الطلب',
     'الاسم الكامل',
-    'رقم الهاتف',
+    'رقم الهاتف الأول',
+    'رقم الهاتف الثاني',
     'البريد الإلكتروني',
     'الدولة',
     'المدينة',
@@ -106,7 +108,7 @@ function setupSheet() {
   ]);
   
   // تنسيق صف العناوين
-  var headerRange = sheet.getRange(1, 1, 1, 11);
+  var headerRange = sheet.getRange(1, 1, 1, 12);
   headerRange.setFontWeight('bold');
   headerRange.setBackground('#1a2b4a');
   headerRange.setFontColor('#ffffff');
@@ -116,14 +118,15 @@ function setupSheet() {
   sheet.setColumnWidth(1, 150);   // التاريخ
   sheet.setColumnWidth(2, 120);   // رقم الطلب
   sheet.setColumnWidth(3, 150);   // الاسم
-  sheet.setColumnWidth(4, 130);   // الهاتف
-  sheet.setColumnWidth(5, 180);   // الإيميل
-  sheet.setColumnWidth(6, 100);   // الدولة
-  sheet.setColumnWidth(7, 120);   // المدينة
-  sheet.setColumnWidth(8, 250);   // العنوان
-  sheet.setColumnWidth(9, 80);    // المقاس
-  sheet.setColumnWidth(10, 80);   // الكمية
-  sheet.setColumnWidth(11, 200);  // ملاحظات
+  sheet.setColumnWidth(4, 130);   // الهاتف الأول
+  sheet.setColumnWidth(5, 130);   // الهاتف الثاني
+  sheet.setColumnWidth(6, 180);   // الإيميل
+  sheet.setColumnWidth(7, 100);   // الدولة
+  sheet.setColumnWidth(8, 120);   // المدينة
+  sheet.setColumnWidth(9, 250);   // العنوان
+  sheet.setColumnWidth(10, 80);   // المقاس
+  sheet.setColumnWidth(11, 80);   // الكمية
+  sheet.setColumnWidth(12, 200);  // ملاحظات
   
   Logger.log('تم إعداد الورقة بنجاح');
 }
