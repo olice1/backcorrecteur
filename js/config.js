@@ -7,7 +7,7 @@
 const CONFIG = {
     // Facebook Pixel ID
     // احصل عليه من: Facebook Events Manager > Pixels
-    FACEBOOK_PIXEL_ID: '1518638202769696',
+    FACEBOOK_PIXEL_ID: 'tajer Pixel ID',
     
     // Google Analytics 4 Measurement ID
     // احصل عليه من: GA4 > Admin > Data Streams
@@ -16,7 +16,7 @@ const CONFIG = {
     
     // Google Apps Script Web App URL
     // بعد نشر Google Apps Script كـ Web App، انسخ الرابط هنا
-    GOOGLE_SHEET_URL: 'https://script.google.com/macros/s/AKfycbyJ6nzOOS48pPr4J_CJAZ_SKNc-ujAUbhFScBshMCnz-vA40DYLpe5fBYTx_DJaVw/exec',
+    GOOGLE_SHEET_URL: 'https://script.google.com/macros/s/AKfycbxuWg73BIrJJ7qQKk4GkPoEhytn60S9q2VJAQGi2UO377ORK8HjyWo-Y3rVucDx0XGl/exec',
     
     // قيمة التحويل التقديرية (بالدينار البحريني)
     LEAD_VALUE: 25.00,
